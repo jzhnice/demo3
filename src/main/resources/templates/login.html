@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<form th:action="@{/user/login}" method="post">
+    <table>
+        <tr>
+            <td>
+                <label>用户名/手机号/邮箱</label>
+            </td>
+            <td>
+                <input type="text" name="condition" placeholder="”请输入用户名/手机号/密码">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>密码</label>
+            </td>
+            <td>
+                <input type="password" name="password" placeholder="请输入密码">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">登录</button>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

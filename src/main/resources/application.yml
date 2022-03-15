@@ -1,0 +1,44 @@
+spring:
+#  ?????
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yggdrasil
+    username: root
+    password: 123456
+    #    ?????? hikari
+    hikari:
+      auto-commit: true
+      max-lifetime: 30000
+      maximum-pool-size: 20
+      minimum-idle: 1
+      #      redis??
+  redis:
+    host: 127.0.0.1
+    post: 6379
+#    thymeleaf????
+  thymeleaf:
+    mode: HTML5
+    servlet:
+      content-type: text/html
+      #      ??????
+  web:
+    resources:
+      static-locations: classpath:/static/*
+  mvc:
+    static-path-pattern: /**
+#    ????
+logging:
+  charset:
+    console: UTF-8
+    file: utf-8
+  file:
+    name: blog.log
+    path: /
+  pattern:
+    level: DEBUG
+#    mybatis plus
+mybatis-plus:
+  mapper-locations: classpath:**/*Mapper.xml
+  type-aliases-package: com.dzqc.demo3.entity
+
+
